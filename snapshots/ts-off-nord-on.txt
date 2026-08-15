@@ -1,0 +1,133 @@
+=== date ===
+Sun Aug 16 00:38:54 IST 2026 (label: ts-off-nord-on)
+
+=== routes ===
+Routing tables
+
+Internet:
+Destination        Gateway            Flags               Netif Expire
+default            10.5.0.2           UGScg              utun11       
+default            192.168.1.1        UGScIg                en0       
+10.5.0.2           10.5.0.2           UHr                utun11       
+10.5.0.2/32        link#37            UCS                utun11       
+127                127.0.0.1          UCS                   lo0       
+127.0.0.1          127.0.0.1          UH                    lo0       
+169.254            link#14            UCS                   en0      !
+169.254.20.124     link#14            UHLSW                 en0      !
+169.254.220.210    22:59:71:ea:c7:68  UHLSW                 en0      !
+192.168.1          link#14            UCS                   en0      !
+192.168.1.1/32     link#14            UCS                   en0      !
+192.168.1.1        74:ac:b9:4e:4:ca   UHLWIir               en0   1165
+192.168.1.4        90:9:d0:4f:a6:3b   UHLWIi                en0   1121
+192.168.1.18       d4:6a:6a:3f:8c:a1  UHLWI                 en0   1187
+192.168.1.20       ae:d7:b0:bf:9f:d7  UHLWI                 en0    893
+192.168.1.22       b8:e9:37:5b:6b:7a  UHLWI                 en0    961
+
+=== en0 ===
+	inet 192.168.1.64 netmask 0xffffff00 broadcast 192.168.1.255
+
+=== tunnels ===
+utun11: flags=8051<UP,POINTOPOINT,RUNNING,MULTICAST> mtu 1420
+	inet 10.5.0.2 --> 10.5.0.2 netmask 0xffff0000
+
+=== scutil ===
+DNS configuration
+
+resolver #1
+  nameserver[0] : 100.64.0.2
+  if_index : 37 (utun11)
+  flags    : Supplemental, Request A records, Request AAAA records
+  reach    : 0x00000002 (Reachable)
+  order    : 104600
+
+resolver #2
+  nameserver[0] : 100.64.0.2
+  if_index : 37 (utun11)
+  flags    : Request A records, Request AAAA records
+  reach    : 0x00000002 (Reachable)
+  order    : 200000
+
+resolver #3
+  domain   : local
+  options  : mdns
+  timeout  : 5
+  flags    : Request A records, Request AAAA records
+  reach    : 0x00000000 (Not Reachable)
+  order    : 300000
+
+resolver #4
+  domain   : 254.169.in-addr.arpa
+  options  : mdns
+  timeout  : 5
+  flags    : Request A records, Request AAAA records
+  reach    : 0x00000000 (Not Reachable)
+  order    : 300200
+
+resolver #5
+  domain   : 8.e.f.ip6.arpa
+  options  : mdns
+  timeout  : 5
+  flags    : Request A records, Request AAAA records
+  reach    : 0x00000000 (Not Reachable)
+  order    : 300400
+
+resolver #6
+  domain   : 9.e.f.ip6.arpa
+  options  : mdns
+  timeout  : 5
+  flags    : Request A records, Request AAAA records
+  reach    : 0x00000000 (Not Reachable)
+  order    : 300600
+
+resolver #7
+  domain   : a.e.f.ip6.arpa
+  options  : mdns
+  timeout  : 5
+  flags    : Request A records, Request AAAA records
+  reach    : 0x00000000 (Not Reachable)
+  order    : 300800
+
+resolver #8
+  domain   : b.e.f.ip6.arpa
+  options  : mdns
+  timeout  : 5
+  flags    : Request A records, Request AAAA records
+  reach    : 0x00000000 (Not Reachable)
+  order    : 301000
+
+DNS configuration (for scoped queries)
+
+resolver #1
+  search domain[0] : localdomain
+  nameserver[0] : 192.168.1.1
+  if_index : 14 (en0)
+  flags    : Scoped, Request A records
+  reach    : 0x00020002 (Reachable,Directly Reachable Address)
+
+resolver #2
+  nameserver[0] : 100.64.0.2
+  if_index : 37 (utun11)
+  flags    : Scoped, Request A records, Request AAAA records
+  reach    : 0x00000002 (Reachable)
+
+=== tailscale ===
+(command failed/unavailable)
+
+=== resolution ===
+streamy:
+(no answer)
+streamy.local:
+ip_address: 192.168.1.4
+streamy.tail7c6590.ts.net:
+(no answer)
+erics-mac-mini:
+(no answer)
+erics-mac-mini.local:
+ip_address: 192.168.1.65
+erics-mac-mini.tail7c6590.ts.net:
+(no answer)
+
+=== reachability ===
+100.85.165.14: fail
+100.74.128.60: fail
+192.168.1.4: ok
