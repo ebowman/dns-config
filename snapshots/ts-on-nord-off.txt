@@ -1,0 +1,151 @@
+=== date ===
+Sat Aug 15 23:55:34 IST 2026 (label: ts-on-nord-off)
+
+=== routes ===
+Routing tables
+
+Internet:
+Destination        Gateway            Flags               Netif Expire
+default            192.168.1.1        UGScg                 en0       
+default            link#36            UCSIg              utun17       
+100.64/10          link#36            UCS                utun17       
+100.85.165.14      link#36            UHWIi              utun17       
+100.100.100.100/32 link#36            UCS                utun17       
+100.100.100.100    link#36            UHWIi              utun17       
+100.114.163.70     100.114.163.70     UH                 utun17       
+127                127.0.0.1          UCS                   lo0       
+127.0.0.1          127.0.0.1          UH                    lo0       
+169.254            link#14            UCS                   en0      !
+169.254.20.124     link#14            UHLSW                 en0      !
+169.254.220.210    22:59:71:ea:c7:68  UHLSW                 en0      !
+192.168.1          link#14            UCS                   en0      !
+192.168.1.1/32     link#14            UCS                   en0      !
+192.168.1.1        74:ac:b9:4e:4:ca   UHLWIir               en0   1199
+192.168.1.4        90:9:d0:4f:a6:3b   UHLWIi                en0   1130
+
+=== en0 ===
+	inet 192.168.1.64 netmask 0xffffff00 broadcast 192.168.1.255
+
+=== tunnels ===
+	inet6 fe80::b46e:ad6:808b:2ff2%utun17 prefixlen 64 scopeid 0x24 
+	inet 100.114.163.70 --> 100.114.163.70 netmask 0xffffffff
+
+=== scutil ===
+DNS configuration
+
+resolver #1
+  search domain[0] : tail7c6590.ts.net
+  search domain[1] : localdomain
+  nameserver[0] : 100.100.100.100
+  nameserver[1] : fd7a:115c:a1e0::53
+  if_index : 36 (utun17)
+  flags    : Supplemental, Request A records, Request AAAA records
+  reach    : 0x00000003 (Reachable,Transient Connection)
+  order    : 101400
+
+resolver #2
+  nameserver[0] : 192.168.1.1
+  if_index : 14 (en0)
+  flags    : Request A records
+  reach    : 0x00020002 (Reachable,Directly Reachable Address)
+  order    : 200000
+
+resolver #3
+  domain   : tail7c6590.ts.net.
+  nameserver[0] : 100.100.100.100
+  nameserver[1] : fd7a:115c:a1e0::53
+  if_index : 36 (utun17)
+  flags    : Supplemental, Request A records, Request AAAA records
+  reach    : 0x00000003 (Reachable,Transient Connection)
+  order    : 101401
+
+resolver #4
+  domain   : local
+  options  : mdns
+  timeout  : 5
+  flags    : Request A records
+  reach    : 0x00000000 (Not Reachable)
+  order    : 300000
+
+resolver #5
+  domain   : 254.169.in-addr.arpa
+  options  : mdns
+  timeout  : 5
+  flags    : Request A records
+  reach    : 0x00000000 (Not Reachable)
+  order    : 300200
+
+resolver #6
+  domain   : 8.e.f.ip6.arpa
+  options  : mdns
+  timeout  : 5
+  flags    : Request A records
+  reach    : 0x00000000 (Not Reachable)
+  order    : 300400
+
+resolver #7
+  domain   : 9.e.f.ip6.arpa
+  options  : mdns
+  timeout  : 5
+  flags    : Request A records
+  reach    : 0x00000000 (Not Reachable)
+  order    : 300600
+
+resolver #8
+  domain   : a.e.f.ip6.arpa
+  options  : mdns
+  timeout  : 5
+  flags    : Request A records
+  reach    : 0x00000000 (Not Reachable)
+  order    : 300800
+
+resolver #9
+  domain   : b.e.f.ip6.arpa
+  options  : mdns
+  timeout  : 5
+  flags    : Request A records
+  reach    : 0x00000000 (Not Reachable)
+  order    : 301000
+
+DNS configuration (for scoped queries)
+
+resolver #1
+  search domain[0] : localdomain
+  nameserver[0] : 192.168.1.1
+  if_index : 14 (en0)
+  flags    : Scoped, Request A records
+  reach    : 0x00020002 (Reachable,Directly Reachable Address)
+
+resolver #2
+  search domain[0] : tail7c6590.ts.net
+  nameserver[0] : 100.100.100.100
+  nameserver[1] : fd7a:115c:a1e0::53
+  if_index : 36 (utun17)
+  flags    : Scoped, Request A records, Request AAAA records
+  reach    : 0x00000003 (Reachable,Transient Connection)
+
+=== tailscale ===
+100.114.163.70  chedda             ebowman@  macOS  -                                                        
+100.88.109.91   berltmkdfnx26      ebowman@  macOS  offline, last seen 1d ago                                
+100.74.128.60   erics-mac-mini     ebowman@  macOS  idle, tx 4220 rx 3020                                    
+100.98.246.35   iphone-15-pro-max  ebowman@  iOS    -                                                        
+100.85.165.14   streamy            ebowman@  linux  active; direct 192.168.1.4:41641, tx 1239448 rx 2738824  
+
+=== resolution ===
+streamy:
+ip_address: 100.85.165.14
+streamy.local:
+ip_address: 192.168.1.4
+streamy.tail7c6590.ts.net:
+ip_address: 100.85.165.14
+erics-mac-mini:
+ip_address: 100.74.128.60
+erics-mac-mini.local:
+ip_address: 192.168.1.65
+erics-mac-mini.tail7c6590.ts.net:
+ip_address: 100.74.128.60
+
+=== reachability ===
+100.85.165.14: ok
+100.74.128.60: ok
+192.168.1.4: ok
