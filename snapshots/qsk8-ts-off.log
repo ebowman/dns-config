@@ -1,0 +1,31 @@
+=== dns-watch: qsk8-ts-off ===
+started: Sun Aug 16 14:06:51 IST 2026  duration: 40s
+columns: nord=NordVPN mode (ikev2(ipsec0)=native profile, app(utunN)=app tunnel
+         [UNSUPPORTED w/ tailscale], app+ikev2=both, down=neither)
+         ts=tailscale state  claim=100.64/10 claimed
+         inet-dns/streamy-dns=resolved addr or FAIL  ts-ping/lan-ping=ICMP
+         WEB=real HTTPS fetch — the ONLY column that proves usability.
+         DNS+ICMP can all read green while the browser is dead; trust WEB.
+
+14:06:51  nord=ikev2(ipsec0)  ts=up          claim=yes inet-dns=17.253.144.10   streamy-dns=100.85.165.14   ts-ping=ok   lan-ping=ok   WEB=ok(200)
+14:06:53  nord=ikev2(ipsec0)  ts=up          claim=yes inet-dns=17.253.144.10   streamy-dns=100.85.165.14   ts-ping=ok   lan-ping=ok   WEB=ok(200)
+14:06:55  nord=ikev2(ipsec0)  ts=up          claim=yes inet-dns=17.253.144.10   streamy-dns=100.85.165.14   ts-ping=ok   lan-ping=ok   WEB=ok(200)
+14:06:58  nord=ikev2(ipsec0)  ts=up          claim=yes inet-dns=17.253.144.10   streamy-dns=100.85.165.14   ts-ping=ok   lan-ping=ok   WEB=ok(200)
+14:07:00  nord=ikev2(ipsec0)  ts=up          claim=yes inet-dns=17.253.144.10   streamy-dns=100.85.165.14   ts-ping=ok   lan-ping=ok   WEB=ok(200)
+14:07:02  nord=ikev2(ipsec0)  ts=stopped     claim=no  inet-dns=17.253.144.10   streamy-dns=FAIL            ts-ping=FAIL lan-ping=ok   WEB=ok(200)
+14:07:07  nord=ikev2(ipsec0)  ts=stopped     claim=no  inet-dns=17.253.144.10   streamy-dns=FAIL            ts-ping=FAIL lan-ping=ok   WEB=ok(200)
+14:07:11  nord=ikev2(ipsec0)  ts=stopped     claim=no  inet-dns=17.253.144.10   streamy-dns=FAIL            ts-ping=FAIL lan-ping=ok   WEB=ok(200)
+14:07:15  nord=ikev2(ipsec0)  ts=stopped     claim=no  inet-dns=17.253.144.10   streamy-dns=FAIL            ts-ping=FAIL lan-ping=ok   WEB=ok(200)
+14:07:20  nord=ikev2(ipsec0)  ts=stopped     claim=no  inet-dns=17.253.144.10   streamy-dns=FAIL            ts-ping=FAIL lan-ping=ok   WEB=ok(200)
+14:07:24  nord=ikev2(ipsec0)  ts=stopped     claim=no  inet-dns=17.253.144.10   streamy-dns=FAIL            ts-ping=FAIL lan-ping=ok   WEB=ok(200)
+14:07:28  nord=ikev2(ipsec0)  ts=stopped     claim=no  inet-dns=17.253.144.10   streamy-dns=FAIL            ts-ping=FAIL lan-ping=ok   WEB=ok(200)
+14:07:33  nord=ikev2(ipsec0)  ts=stopped     claim=no  inet-dns=17.253.144.10   streamy-dns=FAIL            ts-ping=FAIL lan-ping=ok   WEB=ok(200)
+14:07:37  nord=ikev2(ipsec0)  ts=stopped     claim=no  inet-dns=17.253.144.10   streamy-dns=FAIL            ts-ping=FAIL lan-ping=ok   WEB=ok(200)
+14:07:41  nord=ikev2(ipsec0)  ts=stopped     claim=no  inet-dns=17.253.144.10   streamy-dns=FAIL            ts-ping=FAIL lan-ping=ok   WEB=ok(200)
+14:07:46  nord=ikev2(ipsec0)  ts=stopped     claim=no  inet-dns=17.253.144.10   streamy-dns=FAIL            ts-ping=FAIL lan-ping=ok   WEB=ok(200)
+14:07:50  nord=ikev2(ipsec0)  ts=stopped     claim=no  inet-dns=17.253.144.10   streamy-dns=FAIL            ts-ping=FAIL lan-ping=ok   WEB=ok(200)
+14:07:55  nord=ikev2(ipsec0)  ts=stopped     claim=no  inet-dns=17.253.144.10   streamy-dns=FAIL            ts-ping=FAIL lan-ping=ok   WEB=ok(200)
+14:07:59  nord=ikev2(ipsec0)  ts=stopped     claim=no  inet-dns=17.253.144.10   streamy-dns=FAIL            ts-ping=FAIL lan-ping=ok   WEB=ok(200)
+14:08:03  nord=ikev2(ipsec0)  ts=up          claim=yes inet-dns=17.253.144.10   streamy-dns=100.85.165.14   ts-ping=ok   lan-ping=ok   WEB=ok(200)
+
+=== done: /Users/ebowman/src/dns-config/snapshots/qsk8-ts-off.log ===
