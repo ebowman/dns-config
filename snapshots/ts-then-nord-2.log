@@ -1,0 +1,30 @@
+=== dns-watch: ts-then-nord-2 ===
+started: Sun Aug 16 09:26:03 IST 2026  duration: 120s
+columns: nord=NordVPN iface  ts=tailscale state  claim=100.64/10 claimed
+         rt=where 100.64.0.2 routes  inet-dns/streamy-dns=resolved addr or FAIL
+
+09:26:03  nord=down        ts=up           claim=yes rt=utun19  inet-dns=17.253.144.10   streamy-dns=100.85.165.14   ts-ping=ok   lan-ping=ok
+09:26:06  nord=down        ts=up           claim=yes rt=utun19  inet-dns=17.253.144.10   streamy-dns=100.85.165.14   ts-ping=ok   lan-ping=ok
+09:26:08  nord=down        ts=up           claim=yes rt=utun19  inet-dns=17.253.144.10   streamy-dns=100.85.165.14   ts-ping=ok   lan-ping=ok
+09:26:10  nord=down        ts=up           claim=yes rt=utun19  inet-dns=17.253.144.10   streamy-dns=100.85.165.14   ts-ping=ok   lan-ping=ok
+09:26:12  nord=down        ts=up           claim=yes rt=utun19  inet-dns=17.253.144.10   streamy-dns=100.85.165.14   ts-ping=ok   lan-ping=ok
+09:26:15  nord=down        ts=up           claim=yes rt=utun19  inet-dns=17.253.144.10   streamy-dns=100.85.165.14   ts-ping=ok   lan-ping=ok
+09:26:17  nord=down        ts=up           claim=yes rt=utun19  inet-dns=17.253.144.10   streamy-dns=100.85.165.14   ts-ping=ok   lan-ping=ok
+09:26:19  nord=down        ts=up           claim=yes rt=utun19  inet-dns=17.253.144.10   streamy-dns=100.85.165.14   ts-ping=ok   lan-ping=ok
+09:26:21  nord=down        ts=up           claim=yes rt=utun19  inet-dns=17.253.144.10   streamy-dns=100.85.165.14   ts-ping=ok   lan-ping=ok
+09:26:23  nord=down        ts=up           claim=yes rt=utun19  inet-dns=17.253.144.10   streamy-dns=100.85.165.14   ts-ping=ok   lan-ping=ok
+09:26:26  nord=down        ts=up           claim=yes rt=utun19  inet-dns=17.253.144.10   streamy-dns=100.85.165.14   ts-ping=ok   lan-ping=ok
+09:26:28  nord=down        ts=up           claim=yes rt=utun19  inet-dns=17.253.144.10   streamy-dns=100.85.165.14   ts-ping=ok   lan-ping=ok
+09:26:30  nord=down        ts=up           claim=yes rt=utun19  inet-dns=17.253.144.10   streamy-dns=100.85.165.14   ts-ping=ok   lan-ping=ok
+09:26:32  nord=down        ts=up           claim=yes rt=utun19  inet-dns=17.253.144.10   streamy-dns=100.85.165.14   ts-ping=ok   lan-ping=ok
+09:26:34  nord=up(utun18)  ts=up           claim=yes rt=utun19  inet-dns=17.253.144.10   streamy-dns=100.85.165.14   ts-ping=FAIL lan-ping=ok
+09:26:38  nord=up(utun18)  ts=up           claim=yes rt=utun19  inet-dns=17.253.144.10   streamy-dns=100.85.165.14   ts-ping=FAIL lan-ping=ok
+09:26:43  nord=up(utun18)  ts=up           claim=yes rt=utun19  inet-dns=17.253.144.10   streamy-dns=100.85.165.14   ts-ping=FAIL lan-ping=ok
+09:26:47  nord=up(utun18)  ts=up           claim=yes rt=utun19  inet-dns=17.253.144.10   streamy-dns=FAIL            ts-ping=FAIL lan-ping=ok
+09:26:56  nord=up(utun18)  ts=up           claim=yes rt=utun19  inet-dns=17.253.144.10   streamy-dns=FAIL            ts-ping=FAIL lan-ping=ok
+09:27:05  nord=up(utun18)  ts=up           claim=yes rt=utun19  inet-dns=17.253.144.10   streamy-dns=FAIL            ts-ping=FAIL lan-ping=ok
+09:27:14  nord=up(utun18)  ts=up           claim=yes rt=utun19  inet-dns=17.253.144.10   streamy-dns=FAIL            ts-ping=FAIL lan-ping=ok
+09:27:23  nord=up(utun18)  ts=up           claim=yes rt=utun19  inet-dns=17.253.144.10   streamy-dns=FAIL            ts-ping=FAIL lan-ping=ok
+09:27:33  nord=up(utun18)  ts=up           claim=yes rt=utun19  inet-dns=17.253.144.10   streamy-dns=FAIL            ts-ping=FAIL lan-ping=ok
+09:27:42  nord=up(utun18)  ts=up           claim=yes rt=utun19  inet-dns=17.253.144.10   streamy-dns=FAIL            ts-ping=FAIL lan-ping=ok
+09:27:51  nord=up(utun18)  ts=up           claim=yes rt=utun19  inet-dns=17.253.144.10   streamy-dns=FAIL            ts-ping=FAIL lan-ping=ok
