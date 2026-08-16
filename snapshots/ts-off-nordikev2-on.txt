@@ -1,0 +1,129 @@
+=== date ===
+Sun Aug 16 12:56:22 IST 2026 (label: ts-off-nordikev2-on)
+
+=== routes ===
+Routing tables
+
+Internet:
+Destination        Gateway            Flags               Netif Expire
+default            link#46            UCSg               ipsec0       
+default            192.168.1.1        UGScIg                en0       
+1.1.1.1            link#46            UHW3Ig             ipsec0      5
+2.16.176.144       link#46            UHWIig             ipsec0       
+2.16.183.231       link#46            UHWIig             ipsec0       
+2.16.206.157       link#46            UHWIig             ipsec0       
+8.8.8.8            link#46            UHWIig             ipsec0       
+10.6.0.41          10.6.0.41          UH                 ipsec0       
+17.57.146.24       link#46            UHWIig             ipsec0       
+17.57.163.33       link#46            UHW3Ig             ipsec0     10
+17.248.211.20      link#46            UHWIig             ipsec0       
+17.248.211.71      link#46            UHWIig             ipsec0       
+17.248.213.66      link#46            UHWIig             ipsec0       
+18.239.18.11       link#46            UHWIig             ipsec0       
+32.184.158.46      link#46            UHWIig             ipsec0       
+34.149.66.165      link#46            UHWIig             ipsec0       
+
+=== en0 ===
+	inet 192.168.1.64 netmask 0xffffff00 broadcast 192.168.1.255
+
+=== tunnels ===
+ipsec0: 	inet 10.6.0.41 --> 10.6.0.41 netmask 0xffffffff
+
+=== nord-mode ===
+ikev2(ipsec0)
+
+=== scutil ===
+DNS configuration
+
+resolver #1
+  nameserver[0] : 103.86.96.100
+  nameserver[1] : 103.86.99.100
+  if_index : 46 (ipsec0)
+  flags    : Request A records
+  reach    : 0x00000003 (Reachable,Transient Connection)
+
+resolver #2
+  domain   : local
+  options  : mdns
+  timeout  : 5
+  flags    : Request A records
+  reach    : 0x00000000 (Not Reachable)
+  order    : 300000
+
+resolver #3
+  domain   : 254.169.in-addr.arpa
+  options  : mdns
+  timeout  : 5
+  flags    : Request A records
+  reach    : 0x00000000 (Not Reachable)
+  order    : 300200
+
+resolver #4
+  domain   : 8.e.f.ip6.arpa
+  options  : mdns
+  timeout  : 5
+  flags    : Request A records
+  reach    : 0x00000000 (Not Reachable)
+  order    : 300400
+
+resolver #5
+  domain   : 9.e.f.ip6.arpa
+  options  : mdns
+  timeout  : 5
+  flags    : Request A records
+  reach    : 0x00000000 (Not Reachable)
+  order    : 300600
+
+resolver #6
+  domain   : a.e.f.ip6.arpa
+  options  : mdns
+  timeout  : 5
+  flags    : Request A records
+  reach    : 0x00000000 (Not Reachable)
+  order    : 300800
+
+resolver #7
+  domain   : b.e.f.ip6.arpa
+  options  : mdns
+  timeout  : 5
+  flags    : Request A records
+  reach    : 0x00000000 (Not Reachable)
+  order    : 301000
+
+DNS configuration (for scoped queries)
+
+resolver #1
+  search domain[0] : localdomain
+  nameserver[0] : 192.168.1.1
+  if_index : 14 (en0)
+  flags    : Scoped, Request A records
+  reach    : 0x00020002 (Reachable,Directly Reachable Address)
+
+resolver #2
+  nameserver[0] : 103.86.96.100
+  nameserver[1] : 103.86.99.100
+  if_index : 46 (ipsec0)
+  flags    : Scoped, Request A records
+  reach    : 0x00000003 (Reachable,Transient Connection)
+
+=== tailscale ===
+(command failed/unavailable)
+
+=== resolution ===
+streamy:
+(no answer)
+streamy.local:
+ip_address: 192.168.1.4
+streamy.tail7c6590.ts.net:
+(no answer)
+erics-mac-mini:
+(no answer)
+erics-mac-mini.local:
+ip_address: 192.168.1.65
+erics-mac-mini.tail7c6590.ts.net:
+(no answer)
+
+=== reachability ===
+100.85.165.14: fail
+100.74.128.60: fail
+192.168.1.4: ok
